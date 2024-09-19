@@ -1,0 +1,4 @@
+set_io i_SW2 51
+set_io i_SW4 52
+
+set_io o_Led1 56
