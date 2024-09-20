@@ -2,7 +2,7 @@
 An introductory course to FPGA development 
 
 
-This is the commands you need to synth and program the FPGA:
+This is the commands you need to synth and program the FPGA on Linux:
 
 
 Synthesize
@@ -15,3 +15,13 @@ flash
 3. icepack <project_name>.txt <project_name>.bin
 
 4. iceprog <project_name>.bin 
+
+This is the commands you need to synth and program the FPGA on Windows:
+
+1. synthesize: yosys -p "synth_ice40 -top <project name>" -o top.json <project name>.sv
+
+2. route and place:  nextpnr-ice40 --json top.json --pcf AND_board-constraints.pcf --asc top.asc --hx1k --package vq100
+
+3. convert to bin: icepack top.asc top.bin
+
+4. flash: iceprog top.bin

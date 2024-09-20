@@ -6,7 +6,7 @@ module AND(
     output o_Led1 // D1
 );
 
-assign o_Led1 = i_SW2 & i_SW4;
+
 
 //Write your logic here:
 
