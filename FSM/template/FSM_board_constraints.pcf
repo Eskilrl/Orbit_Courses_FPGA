@@ -1,0 +1,7 @@
+set_io i_clk 15
+set_io i_SW1 53
+
+set_io o_Led1 56
+set_io o_Led2 57
+set_io o_Led3 59
+set_io o_Led4 60
