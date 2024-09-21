@@ -6,7 +6,7 @@ This is the commands you need to synth and program the FPGA on Linux:
 
 
 
-1. Synthesize: yosys -p "read_verilog <project_name>.sv; synth_ice40 -blif <projeck_name>.blif"
+1. Synthesize: yosys -p "read_verilog -sv <project_name>.sv; synth_ice40 -blif <projeck_name>.blif"
 
 
 2. route and place: arachne-pnr -d 1k -p <project_name>_board-constraints.pcf -P vq100 -o <project_name>.txt <project_name>.blif
@@ -25,3 +25,4 @@ This is the commands you need to synth and program the FPGA on Windows:
 3. convert to bin: icepack top.asc top.bin
 
 4. flash: iceprog top.bin
+
